@@ -17,16 +17,19 @@ function getRandom() {
 
     do{
 
-        opcion_jugador=parseInt(prompt("Bienvenido a piedra papelo tijera escoje una opcion para jugar\n 1......papel\n 2......Piedra \n 3......Tijera"));
+        opcion_jugador=parseInt(prompt("Bienvenido a piedra papelo tijera escoje una opcion para jugar\n 1......papel\n 2......Piedra \n 3......Tijera \n 4.....salir"));
 
 
-        while(opcion_jugador>3 && opcion_jugador<0){
+        while(opcion_jugador>4 && opcion_jugador<0){
             alert("Numero fuera de rango vuelve aintentar");
             opcion_jugador=prompt("opc");
         }
         
         cp=getRandom();
         
+        if(opcion_jugador===4){
+            break
+        }
 
         if(opcion_jugador==cp){
             empates++;
